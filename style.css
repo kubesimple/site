@@ -2962,6 +2962,14 @@ svg.svg-intro-bottom {
 .hiw-titles__slide.swiper-slide-active::after {
     height: 2px;
 }
+
+.hiw-content__slide.hiw-content__term {
+	height: 631px;
+	width: 944px;
+	text-align: left;
+	margin: auto;
+}
+
 /*  PRICING 	 */
 /*---------------*/
 .pricing__switcher{
@@ -2984,6 +2992,8 @@ svg.svg-intro-bottom {
 	-webkit-box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .45), -10px 0 15px -10px rgba(0, 0, 0, .45);
 	box-shadow: 10px 0 15px -10px rgba(0, 0, 0, .45), -10px 0 15px -10px rgba(0, 0, 0, .45);    
 }
+
+
 /*  TESTIMONIALS 	 */
 /*---------------*/
  .testimonials{
