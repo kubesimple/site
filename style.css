@@ -2084,6 +2084,7 @@ select.select__field{
 	clear:both;
 	float:left;
 	margin:40px 0 0 0;
+	margin-top: 10px;
 	cursor:pointer;
 }
 /*===============================================*/
@@ -3099,6 +3100,7 @@ svg.svg-intro-bottom {
 }
 .form__submit{
 	margin:40px 0 0 0;
+	margin-top: 10px;
 }
 .svg-form-left{
 	display:none;
@@ -3129,7 +3131,7 @@ svg.svg-cta-bottom {
   display: block;
 }
 .modal__info{
-	display:none;
+	display: none;
 }
 .modal__form{
 	width:90%;
@@ -3279,7 +3281,8 @@ svg.svg-cta-bottom {
 }
 .btn{
 	padding:8px 15px;
-	margin:0 5px;	
+	margin:0 5px;
+	margin-top: 10px;	
 }
 .btn--play{
 	padding-right:40px; 
