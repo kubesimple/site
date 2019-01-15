@@ -22,7 +22,10 @@ slideToClickedSlide: true
 var swiperc = new Swiper ('.hiw-content', {
 direction: 'horizontal',
 effect: 'slide'
-}); 
+});
+swipert.on('slideChange', function() {
+  window.RunDeploy();
+})
 
 swipert.controller.control = swiperc;
 swiperc.controller.control = swipert;

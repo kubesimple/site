@@ -3,14 +3,19 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="viewport" content="width=device-width; initial-scale=1; maximum-scale=1" />
-<meta name="author" content="SmartTemplates" />
+<meta name="author" content="kubesimple" />
 <meta name="description" content="landing page template for saas companies" />
 <meta name="keywords" content="landing page template, saas landing page template, saas website template, one page saas template" />
-<title>Lateral | Demo 13</title>
+<title>kubesimple | run your apps on k8s without hassle</title>
 <link rel="stylesheet" href="css/swiper.css">
 <link rel="stylesheet" href="style.css">
 <link rel="stylesheet" href="css/accept-cookies.css">
-<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet"> 
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.css">
+<link rel="stylesheet" href="css/prism.css">
+<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
+<link rel="icon" 
+      type="image/png" 
+      href="/images/favicon.png"> 
 </head>
 <body>
 	<header class="header">
@@ -21,13 +26,13 @@
 					<li><a class="selected header-link" href="#intro">HOME</a></li>
 					<li class="menu-item-has-children"><a href="#features" class="header-link">PRODUCTS</a>
 						<ul class="sub-menu">
-							<li class="h-vps"><a href="#pricing" class="header-link">Simplified K8S Hosting<span>Starting at $4.50 / month</span></a></li>
+							<li class="h-vps"><a href="#pricing" class="header-link">Simplified K8S Hosting<span>Starting at $18 / month</span></a></li>
 							<li class="h-shared"><a href="#pricing" class="header-link">High Availability<span>Starting at $36 / month</span></a></li>
 						</ul>
 					</li>
 					<li><a href="#hiw" class="header-link">HOW IT WORKS</a></li>
 					<li><a href="#morefeatures" class="header-link">FEATURES</a></li>
-					<li class="header__btn header__btn--login modal-toggle" data-openpopup="signuplogin" data-popup="login"><a href="#">LOGIN</a></li>
+					<!--<li class="header__btn header__btn--login modal-toggle" data-openpopup="signuplogin" data-popup="login"><a href="#">LOGIN</a></li>-->
 					<li class="header__btn header__btn--signup modal-toggle" data-openpopup="signuplogin" data-popup="signup"><a href="#">GET STARTED</a></li>			
 				</ul>
 			</nav> 
@@ -44,8 +49,8 @@
 					<div class="intro__subtitle">Get high availability and a secure app without being a K8S expert.  It's like Heroku for Kubernetes.</div>
 					<div class="intro__description">Get started <span>today</span>!</div>
 					<div class="intro__buttons intro__buttons--left">
-						<a href="index.html" class="btn btn--blue-bg">SEE PLANS</a>
-						<a href="index.html" class="btn btn--white-border">SIGN UP</a>
+						<a href="#pricing" class="btn btn--blue-bg">SEE PLANS</a>
+						<a data-openpopup="signuplogin" data-popup="signup" class="btn btn--white-border modal-toggle">SIGN UP</a>
 					</div>
 				    </div>	
 				</div>
@@ -136,24 +141,12 @@
 							<div class="hiw-titles">
 								<div class="hiw-titles__wrapper swiper-wrapper">
 									<div class="hiw-titles__slide swiper-slide">
-									<img src="images/icons/icons-64/browser-64.png" alt="" title=""/>
-									<span>Initializing</span>
+									<svg class="lnr lnr-step"><use xlink:href="#lnr-layers"></use></svg>
+									<span>Define App</span>
 									</div>
 									<div class="hiw-titles__slide swiper-slide">
-									<img src="images/icons/icons-64/switched-64.png" alt="" title=""/>
-									<span>Configuration</span>
-									</div>
-									<div class="hiw-titles__slide swiper-slide">
-									<img src="images/icons/icons-64/security-64.png" alt="" title=""/>
-									<span>Security Levels</span>
-									</div>
-									<div class="hiw-titles__slide swiper-slide">
-									<img src="images/icons/icons-64/tabs-64.png" alt="" title=""/>
-									<span>Add Instances</span>
-									</div>
-									<div class="hiw-titles__slide swiper-slide">
-									<img src="images/icons/icons-64/desktop-code-64.png" alt="" title=""/>
-									<span>API Settings</span>
+									<svg class="lnr lnr-step"><use xlink:href="#lnr-rocket"></use></svg>
+									<span>Deploy</span>
 									</div>
 								</div>	
 							</div>								   
@@ -161,21 +154,11 @@
 							<div class="hiw-content">
 								<div class="hiw-content__wrapper swiper-wrapper">
 									<div class="hiw-content__slide swiper-slide">
-								
-											<img src="images/hiw-slide/slide1.png" alt="" title=""/>			
-									 </div>
+										<div style="height: 631px; width: 944px; text-align: left; margin: auto;" id="step1"></div>
+									</div>
 									<div class="hiw-content__slide swiper-slide">
-											<img src="images/hiw-slide/slide2.png" alt="" title=""/>			
+										<div style="height: 631px; width: 944px; text-align: left; margin: auto;" id="step2"></div>
 									</div>				
-									<div class="hiw-content__slide swiper-slide">
-											<img src="images/hiw-slide/slide3.png" alt="" title=""/>			
-									 </div>
-									<div class="hiw-content__slide swiper-slide">
-											<img src="images/hiw-slide/slide1.png" alt="" title=""/>			
-									</div>
-									<div class="hiw-content__slide swiper-slide">
-											<img src="images/hiw-slide/slide3.png" alt="" title=""/>			
-									</div>
 								</div>
 							</div>
 			
@@ -336,8 +319,9 @@
 						<div class="pricing__plan">
 							<h3 class="pricing__title">STARTER</h3>   
 							<div class="pricing__values">
+								<div class="pricing__value pricing__value--hide pricing__value--hidden" style="font-size: 1rem; margin-top: -1.2rem;">Save $21 with a yearly plan</div> 
 								<div class="pricing__value pricing__value--show"><span>$</span>18 <b>/ month</b></div>
-								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>29 <b>/ yearly</b></div>
+								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>195 <b>/ yearly</b></div>
 							</div>	
 							<ul class="pricing__list">
 								<li><b>3 Gb</b> Memory</li>
@@ -355,15 +339,16 @@
 								</div>
 								<span class="pricing__list--show-more">+ All features</span>
 							</ul> 
-							<a class="pricing__signup" href="">Sign up</a>
+							<a class="pricing__signup modal-toggle" data-openpopup="signuplogin" data-popup="signup">Sign up</a>
 						</div>
 						<div class="pricing__plan pricing__plan--popular">
 						         <div class="pricing__badge-bg"></div>
 							 <div class="pricing__badge-text">POPULAR</div>
 							<h3 class="pricing__title">TRACTION</h3>       
 							<div class="pricing__values">
+								<div class="pricing__value pricing__value--hide pricing__value--hidden" style="font-size: 1rem; margin-top: -1.2rem;">Save $43 with a yearly plan</div>       
 								<div class="pricing__value pricing__value--show"><span>$</span>36 <b>/ month</b></div>
-								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>50 <b>/ yearly</b></div>
+								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>389 <b>/ yearly</b></div>
 							</div>
 							<ul class="pricing__list">
 								<li><b>6 Gb</b> Memory</li>
@@ -381,13 +366,14 @@
 								</div>
 								<span class="pricing__list--show-more">+ All features</span>
 							</ul> 
-							<a class="pricing__signup" href="">Sign up</a>
+							<a class="pricing__signup modal-toggle" data-openpopup="signuplogin" data-popup="signup">Sign up</a>
 						</div>
 						<div class="pricing__plan">
-							<h3 class="pricing__title">SCALING</h3>       
+							<h3 class="pricing__title">SCALING</h3>
 							<div class="pricing__values">
+								<div class="pricing__value pricing__value--hide pricing__value--hidden" style="font-size: 1rem; margin-top: -1.2rem;">Save 10% with a yearly plan</div>       
 								<div class="pricing__value pricing__value--show"><span>$</span>72+ <b> / month</b></div>
-								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>300 <b>/ yearly</b></div>
+								<div class="pricing__value pricing__value--hide pricing__value--hidden"><span>$</span>778+ <b>/ yearly</b></div>
 							</div>
 							<ul class="pricing__list">
 								<li><b>Unlimited</b> Memory (low per-Gb price)</li>
@@ -402,7 +388,7 @@
 								</div>
 								<span class="pricing__list--show-more">+ All features</span>
 							</ul> 
-							<a class="pricing__signup" href="">Contact</a>
+							<a class="pricing__signup modal-toggle" data-openpopup="signuplogin" data-popup="signup">Contact</a>
 						</div> 	
 					</div>
 				
@@ -540,7 +526,7 @@
 						<p class="grid__text">Get started on Kubernetes without the hassle.<br><br>Did you know we ♡ open source and donate 10% of our profits to the open source projects that make kubesimple possible?</p>
 					</div>
 					<div class="grid__item grid__item--padding">
-						<a href="#" class="grid__more">SIGN UP</a>
+						<a data-openpopup="signuplogin" data-popup="signup" class="grid__more modal-toggle">SIGN UP</a>
 					</div>
 
 				</div>
@@ -658,10 +644,10 @@
 			
 			<div class="modal__content modal__content--signup">
 				<div class="modal__form form">
-					<h2 class="form__title">Signup</h2>
-						<form class="form__container" id="SignupForm" method="post" action="index.html">
+					<h2 class="form__title">We'll be in touch when it's ready</h2>
+						<form class="form__container" id="SignupForm" method="post" action="index.html" data-netlify="true">
 						<div class="form__row">
-							<label class="form__label" for="names">Username</label>
+							<label class="form__label" for="names">Name</label>
 							<input name="namec" id="names" class="form__input" type="text"/>
 							<span class="form__row-border"></span>
 						</div>
@@ -670,23 +656,23 @@
 							<input name="emails" class="form__input" type="text"/>	
 							<span class="form__row-border"></span>									
 						</div>
-						<div class="form__row">
+						<!--<div class="form__row">
 							<label class="form__label" for="pass">Password</label>
 							<input name="pass" id="pass" class="form__input" type="password"/>
 							<span class="form__row-border"></span>
-						</div>
-						<input type="submit" name="submit" class="form__submit btn btn--green-bg" id="submit" value="SIGNUP" />
+						</div>-->
+						<input type="submit" name="submit" class="form__submit btn btn--green-bg" id="submit" value="SIGN UP" />
 						</form>
 				</div>
 				<div class="modal__info">
-					<h2 class="modal__title">Allready have an account?</h2>
-					<div class="modal__descr">Login now and starting using our <span>amazing</span> products</div>
+					<h2 class="modal__title">Join the beta program</h2>
+					<div class="modal__descr">Sign up for the closed beta and get <span>3 months free</span></div>
 					<ul class="modal__list">
-					<li>premium access to all products</li>
-					<li>free testing tools</li>
-					<li>unlimited user accounts</li>
+					<li>Be the first to try it</li>
+					<li>Get priority support forever</li>
+					<li>Lock in beta pricing</li>
 					</ul>
-					<button class="modal__switch modal__switch--login" data-popup="login">Login</button>
+					<!--<button class="modal__switch modal__switch--login" data-popup="login">Login</button>-->
 				</div>
 			</div>  <!-- End Modal signup -->
 			
@@ -715,6 +701,10 @@
 <script src="js/swiper.custom.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/cookiepopup.js"></script>
+<script src="js/prism.js"></script>
+<script src="js/waypoints.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.js"></script>
+<script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 <script>
 $.acceptCookies({
 	  title: "This website uses cookies",
@@ -724,6 +714,75 @@ $.acceptCookies({
 	  position: "bottomright",
 	  onAccept: function(){}
 });
+
+
+
+
+const cfg = new GDemo('#step1');
+const cmd = new GDemo('#step2');
+
+const code = `
+# Define your application stack using a simplified YAML format without knowing the 
+# intricacies of kubernetes
+
+version: '1'
+appname: kubesimple/my-first-app
+services:
+  - kind: app
+    image: kubesimple/my-app
+    public: true
+  - kind: db
+    image: kubesimple/postgres
+    memory: 1Gi
+  - kind: disk
+    size: 10Gi 
+
+# This gives you a basic app with a public load-balanced IP address for your app, a Postgres database
+# and a replicated local disk you can access from any container.
+
+# kubesimple takes this simplified format and converts it to a Helm chart that deploys your services
+# in a highly available and secure configuration
+`
+const hCode = Prism.highlight(
+  code,
+  Prism.languages.yaml,
+  'yaml'
+);
+
+var waypoint1 = new Waypoint({
+  element: document.getElementById('step1'),
+  offset: 1000,
+  handler: function(direction) {
+	cfg
+	.openApp('editor', {minHeight: '644px', windowTitle: 'kubesimple.yml'})
+  	.write(hCode, {onCompleteDelay: 500})
+  	.end();
+
+  }
+})
+var ranOnce = false;
+
+function RunDeploy() {
+	if (!ranOnce) {
+		cmd
+		.openApp('terminal', {minHeight: '644px', promptString: '~/my-app $'})
+		.command('ksctl deploy -v -f kubesimple.yml', {onCompleteDelay: 500})
+		.respond('Validating kubesimple configuration...........[OK]', {onCompleteDelay: 500})
+		.respond('Generating your Helm configuration............[OK]', {onCompleteDelay: 500})
+		.respond('Setting up your Postgres database.............[OK]', {onCompleteDelay: 200})
+		.respond('-> 3 pods running, 1 master, 2 hot standby....[OK]', {onCompleteDelay: 200})
+		.respond('-> Streaming replication......................[OK]', {onCompleteDelay: 200})
+		.respond('-> Automatic backups every 2 hours............[OK]', {onCompleteDelay: 200})
+		.respond('Setting up your local disk....................[OK]', {onCompleteDelay: 500})
+		.respond('-> Replicated disk created, 3 nodes, 10Gi.....[OK]', {onCompleteDelay: 200})
+		.respond('', {onCompleteDelay: 0})
+		.respond('Success!  Your application is available at https://my-app.ns-crazymonkey.kubesimple.com', {onCompleteDelay: 200})
+		.command('')
+		.end()
+	}
+	ranOnce = true;
+}
+
 </script>
 </body>
 </html>
