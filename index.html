@@ -12,6 +12,8 @@
 <link rel="stylesheet" href="css/accept-cookies.css">
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.css">
 <link rel="stylesheet" href="css/prism.css">
+<link rel="stylesheet" href="css/snackbar.min.css">
+<link rel="stylesheet" href="css/material.css">
 <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,900" rel="stylesheet">
 <link rel="icon" 
       type="image/png" 
@@ -694,6 +696,8 @@
 				</div>
 			</div>
 	  </section>    <!-- Modal for animation -->
+	  <span data-toggle=snackbar data-content="You're all signed up. Thanks!" data-timeout="5000" id="formsuccess">Click me</span>
+	  
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.paroller.min.js"></script>
 <script src="js/jquery.custom.js"></script>
@@ -703,6 +707,7 @@
 <script src="js/cookiepopup.js"></script>
 <script src="js/prism.js"></script>
 <script src="js/waypoints.min.js"></script>
+<script src="js/snackbar.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@glorious/demo/dist/gdemo.min.js"></script>
 <script src="https://cdn.linearicons.com/free/1.0.0/svgembedder.min.js"></script>
 <script>
@@ -715,6 +720,13 @@ $.acceptCookies({
 	  onAccept: function(){}
 });
 
+$(document).ready(function () {
+    if(window.location.href.indexOf("index") > -1) {
+		jQuery(function($) {
+			$("#formsuccess").snackbar("show");
+		});
+	}
+});
 
 
 
