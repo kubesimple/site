@@ -734,8 +734,9 @@ const cfg = new GDemo('#step1');
 const cmd = new GDemo('#step2');
 
 const code = `
-# Define your application stack using a simplified YAML format without knowing the 
-# intricacies of kubernetes
+# Define your application stack:
+# - in a simplified manifest 
+# - without being a k8s expert 
 
 version: '1'
 appname: kubesimple/my-first-app
@@ -749,11 +750,12 @@ services:
   - kind: disk
     size: 10Gi 
 
-# This gives you a basic app with a public load-balanced IP address for your app, a Postgres database
-# and a replicated local disk you can access from any container.
-
-# kubesimple takes this simplified format and converts it to a Helm chart that deploys your services
-# in a highly available and secure configuration
+# This gives you a basic app:
+# - public load-balanced IP
+# - Postgres database
+# - replicated local disk
+# - highly available configuration
+# - Helm chart you can download any time
 `
 const hCode = Prism.highlight(
   code,
@@ -773,22 +775,25 @@ var waypoint1 = new Waypoint({
   }
 })
 var ranOnce = false;
+const space = `
+`
 
 function RunDeploy() {
 	if (!ranOnce) {
 		cmd
 		.openApp('terminal', {minHeight: '644px', promptString: '~/my-app $'})
 		.command('ksctl deploy -v -f kubesimple.yml', {onCompleteDelay: 500})
-		.respond('Validating kubesimple configuration...........[OK]', {onCompleteDelay: 500})
-		.respond('Generating your Helm configuration............[OK]', {onCompleteDelay: 500})
-		.respond('Setting up your Postgres database.............[OK]', {onCompleteDelay: 200})
-		.respond('-> 3 pods running, 1 master, 2 hot standby....[OK]', {onCompleteDelay: 200})
-		.respond('-> Streaming replication......................[OK]', {onCompleteDelay: 200})
-		.respond('-> Automatic backups every 2 hours............[OK]', {onCompleteDelay: 200})
-		.respond('Setting up your local disk....................[OK]', {onCompleteDelay: 500})
-		.respond('-> Replicated disk created, 3 nodes, 10Gi.....[OK]', {onCompleteDelay: 200})
-		.respond('', {onCompleteDelay: 0})
-		.respond('Success!  Your application is available at https://my-app.ns-crazymonkey.kubesimple.com', {onCompleteDelay: 200})
+		.respond('Validating kubesimple configuration.........[OK]', {onCompleteDelay: 500})
+		.respond('Generating your Helm configuration..........[OK]', {onCompleteDelay: 500})
+		.respond('Setting up your Postgres database...........[OK]', {onCompleteDelay: 200})
+		.respond('-> 3 pods running, 1 master, 2 hot standby..[OK]', {onCompleteDelay: 200})
+		.respond('-> Streaming replication....................[OK]', {onCompleteDelay: 200})
+		.respond('-> Automatic backups every 2 hours..........[OK]', {onCompleteDelay: 200})
+		.respond('Setting up your local disk..................[OK]', {onCompleteDelay: 500})
+		.respond('-> Replicated disk created, 3 nodes, 10Gi...[OK]', {onCompleteDelay: 200})
+		.respond(space, {onCompleteDelay: 0})
+		.respond('Success!  Your application is available at:', {onCompleteDelay: 0})
+		.respond('https://my-app.ns-crazymonkey.kubesimple.com', {onCompleteDelay: 200})
 		.command('')
 		.end()
 	}
