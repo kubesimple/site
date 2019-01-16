@@ -16,7 +16,11 @@ $(document).ready(function () {
 	
 	// Modal login and signup
 	$('.modal-toggle').on('click', function(e) {
-	  e.preventDefault();
+		e.preventDefault();
+		console.log("got click");
+		$.ajax({
+			url: "http://visit.kubesimple.com:9001/inc"
+		});
 	  var modalopen = $(this).data("openpopup");
 	  $('.modal--'+modalopen).toggleClass('modal--visible');
 	  var modaltype = $(this).data("popup");
