@@ -21,6 +21,7 @@ $(document).ready(function () {
 		$.ajax({
 			url: "http://visit.kubesimple.com:9001/inc"
 		});
+		rdt('track', 'SignUp');
 	  var modalopen = $(this).data("openpopup");
 	  $('.modal--'+modalopen).toggleClass('modal--visible');
 	  var modaltype = $(this).data("popup");
